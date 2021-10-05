@@ -1,0 +1,13 @@
+IS 2140 Assignment 1
+
+TrectextCollection (docset.trectext):
+index text corpus running time:  0:34:55.133709
+Documents of corpus processed: 500000 docs
+result.trectext was created under "data/result.trectext"
+
+TrecwebCollection (docset.trecweb):
+index text corpus running time:  0:18:31.449998
+Documents of corpus processed: 190000 docs
+result.trecweb was created under "data/result.trecweb"
+
+My code generated the result and took a total time of approx. 52.86

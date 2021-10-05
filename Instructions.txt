@@ -1,0 +1,13 @@
+IS 2140 Assignment 1
+
+Pre-requisites:
+Please install the nltk library using following command:
+pip3 install nltk --user
+Download docset.trectext and docset.trecweb files as provided in the instructions for Assignment 1
+
+Instruction to run:
+Unzip the “nvp15_2140a1.zip”
+Place the docset.trectext and docset.trecweb inside folder "src/data/output"
+Confirm that stopword.txt is present inside folder "src/data/input"
+Go inside the folder “nvp15_2140a1/src”
+Run this command: python3 HW1Main.py
