@@ -130,3 +130,6 @@ dmypy.json
 
 # MacOS-related
 .DS_Store
+
+# .csv ignore
+Assignment2/src/data/*

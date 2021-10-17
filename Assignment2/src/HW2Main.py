@@ -17,8 +17,8 @@ def WriteIndex(type):
         indexWriter.index(doc[0], doc[1])
         count+=1
         if count%30000==0:
-            print("finish ", count," docs")
-    print("totally finish ", count, " docs")
+            print("finish ", str(count)," docs")
+    print("totally finish ", str(count), " docs")
     indexWriter.close()
     return
 
@@ -47,7 +47,7 @@ print ("load index & retrieve the token running time: ", endTime - startTime)
 startTime = datetime.datetime.now()
 WriteIndex("trectext")
 endTime = datetime.datetime.now()
-print ("index web corpus running time: ", endTime - startTime)
+print ("index text corpus running time: ", endTime - startTime)
 startTime = datetime.datetime.now()
 ReadIndex("trectext", "yhoo")
 endTime = datetime.datetime.now()
