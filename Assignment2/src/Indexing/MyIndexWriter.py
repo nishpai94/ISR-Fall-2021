@@ -1,6 +1,7 @@
 import Classes.Path as Path
 import csv
 from collections import OrderedDict
+import threading
 
 # Efficiency and memory cost should be paid with extra attention.
 class MyIndexWriter:
@@ -71,30 +72,35 @@ class MyIndexWriter:
     def close(self):
 
         # write posting file to hard disk
-        writer = csv.writer(self.wPost)
-        for key, value in self.posting.items():
-            writer.writerow([key, value])
-
-        del self.posting
-        self.wPost.close()
+        t1 = threading.Thread(target=writeToFile, args=(self.wPost, self.posting))
 
         # write dictionary term file to hard disk
-        writer = csv.writer(self.wDict)
-        for key, value in self.termDict.items():
-            writer.writerow([key, value])
-
-        del self.termDict
-        self.wDict.close()
+        t2 = threading.Thread(target=writeToFile, args=(self.wDict, self.termDict))
 
         # write DocId dictionary file to hard disk
-        writer = csv.writer(self.wDocIdDict)
-        for key, value in self.docIdDict.items():
-            writer.writerow([key, value])
+        t3 = threading.Thread(target=writeToFile, args=(self.wDocIdDict, self.docIdDict))
 
-        del self.docIdDict
-        self.wDocIdDict.close()
+        # start the threads
+        t1.start()
+        t2.start()
+        t3.start()
+
+        # wait for threads to join
+        t1.join()
+        t2.join()
+        t3.join()
 
         return
+
+def writeToFile(filename, dictname):
+     # write posting file to hard disk
+    writer = csv.writer(filename)
+    for key, value in dictname.items():
+        writer.writerow([key, value])
+
+    del dictname
+    filename.close()
+    return
 
 # object2 = MyIndexWriter("trectext")
 # object2.index('lists-000-0000000', "normal egypt activ support anti iraq coalit gulf crisi symbol visit egyptian presid hosni mubarak jordan januari time jordan improv ti palestinian dispel fear arous palestinian due jordan' special role jerusalem jordanian isra accord addit jordan made effort push forward palestinian isra negoti expand palestinian autonomi west bank benefit jordan' peac treati israel attitud baghdad brought warmer")
