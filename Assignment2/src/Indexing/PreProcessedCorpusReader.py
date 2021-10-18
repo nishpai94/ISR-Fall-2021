@@ -6,7 +6,7 @@ class PreprocessedCorpusReader:
 
         if type == "trectext":
             self.fp = open(Path.ResultHM1 + type, 'r', encoding='utf-8')
-        else:
+        else: # if type == "trecweb":
             self.fp = open(Path.ResultHM1 + type, 'r', encoding='utf-8')
         return
 
@@ -24,8 +24,3 @@ class PreprocessedCorpusReader:
         else:
             self.fp.close()
             return
-
-# TODO : to remove this
-# object1 = PreprocessedCorpusReader("trecweb")
-# print(object1.nextDocument())
-# print(object1.nextDocument())

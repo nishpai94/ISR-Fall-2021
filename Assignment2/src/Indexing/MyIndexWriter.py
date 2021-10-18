@@ -8,7 +8,7 @@ class MyIndexWriter:
 
         self.docIdDict = {}  # storing Dictionary for docIds
         self.termDict = {}  # Term Dictionary
-        self.posting = {}  # store posting dict
+        self.posting = {}  # store Posting dict
 
         if type == "trecweb":
             self.wDict = open(Path.IndexWebDir + "IndexWebDict.csv", 'w', encoding='utf-8')
@@ -38,16 +38,17 @@ class MyIndexWriter:
         # in form of termDict[term] = collectionFreq
         for term in termList:
             if term not in self.termDict:
-                self.termDict[term] = 1
+                self.termDict[term] = 1   # assigning term collection frequency value as 1
             else:
-                self.termDict[term] += 1
+                self.termDict[term] += 1   # increment collection frequency by 1
+
             # Adding term, docId and term frequency to posting dict
             # in form of posting[term][docId] = termFreq
             if term not in self.posting.keys():
-                self.posting[term] = {}
-                self.posting[term][self.docId] = 1
+                self.posting[term] = {}  # make a nested dictionary
+                self.posting[term][self.docId] = 1  # assigning term frequency value to 1
             else:
-                # this only when the docId key is not found
+                # this is only when the docId key is not found
                 if self.docId not in self.posting[term].keys():
                     self.posting[term][self.docId] = 0  # initialize the term frequency value with zero
                 self.posting[term][self.docId] += 1  # once the docId key is added we can just increment the count
@@ -73,10 +74,11 @@ class MyIndexWriter:
 
         return
 
+    # Function to write to the above files
     def writeToFile(self, filename, dictname):
-        # write posting file to hard disk
+        # writing respective files to hard disk
         writer = csv.writer(filename)
-        writer.writerows(dictname.items())
-        del dictname
+        writer.writerows(dictname.items())  # write rows of respective dictionaries
+        del dictname  # clear dictionary
         filename.close()
         return
