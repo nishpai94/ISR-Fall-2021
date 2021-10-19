@@ -1,0 +1,13 @@
+IS 2140 Assignment 2
+
+Pre-requisites:
+- Download result.trectext and result.trecweb files as provided in the instructions for Assignment 2
+- Unzip the “nvp15_2140a2.zip”
+- Place the result.trectext and result.trecweb inside folder "nvp15_2140a2/src/data"
+- Create folders indextext and indexweb inside folder "nvp15_2140a2/src/data"
+- The Text index file and Web index file will be generated inside folders "nvp15_2140a2/src/data/indextext" and
+"nvp15_2140a2/src/data/indexweb" respectively
+
+Instructions to run:
+- Go inside the folder “nvp15_2140a2/src”
+- Run this command: python3 HW2Main.py

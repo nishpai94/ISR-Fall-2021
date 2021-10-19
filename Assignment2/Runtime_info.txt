@@ -1,0 +1,34 @@
+IS 2140 Assignment 2
+
+
+- Index Web
+Index web corpus running time:  0:01:20.733133
+
+
+- Index Text
+index text corpus running time:  0:04:17.251156
+
+
+- Retreival result of token "acow" in "trecweb"
+
+finish reading the index
+ >> the token "acow" appeared in 3 documents and 3 times in total
+lists-092-3952951	154963	1
+lists-092-4113429	154964	1
+lists-108-11347927	186006	1
+load index & retrieve the token running time:  0:00:08.886993
+
+
+- Retreival result of token "yhoo" in "trectext"
+
+finish reading the index
+ >> the token "yhoo" appeared in 5 documents and 5 times in total
+NYT19990208.0397	491084	1
+NYT19990405.0253	513383	1
+NYT20000717.0201	677372	1
+NYT20000927.0406	702700	1
+NYT20000928.0343	703145	1
+load index & retrieve the token running time:  0:00:32.114439
+
+
+My code generated the result and took a total time of approx. : 6 mins

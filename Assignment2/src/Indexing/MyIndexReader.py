@@ -11,14 +11,14 @@ class MyIndexReader:
     def __init__(self, type):
 
         if type == "trecweb":
-            self.rDict = open(Path.IndexWebDir+"IndexWebDict.csv", 'r', encoding='utf-8')
-            self.rPost = open(Path.IndexWebDir+"IndexWebPost.csv", 'r', encoding='utf-8')
-            self.rDocIdDict = open(Path.IndexWebDir+"IndexDocIdDict.csv", 'r', encoding='utf-8')
+            self.rDict = open(Path.IndexWebDir+"IndexWebDict", 'r', encoding='utf-8')
+            self.rPost = open(Path.IndexWebDir+"IndexWebPost", 'r', encoding='utf-8')
+            self.rDocIdDict = open(Path.IndexWebDir+"IndexDocIdDict", 'r', encoding='utf-8')
 
         else:  # if type == "trectext"
-            self.rDict = open(Path.IndexTextDir+"IndexTextDict.csv", 'r', encoding='utf-8')
-            self.rPost = open(Path.IndexTextDir+"IndexTextPost.csv", 'r', encoding='utf-8')
-            self.rDocIdDict = open(Path.IndexTextDir+"IndexDocIdDict.csv", 'r', encoding='utf-8')
+            self.rDict = open(Path.IndexTextDir+"IndexTextDict", 'r', encoding='utf-8')
+            self.rPost = open(Path.IndexTextDir+"IndexTextPost", 'r', encoding='utf-8')
+            self.rDocIdDict = open(Path.IndexTextDir+"IndexDocIdDict", 'r', encoding='utf-8')
 
         print("finish reading the index")
 

@@ -11,13 +11,13 @@ class MyIndexWriter:
         self.posting = {}  # store Posting dict
 
         if type == "trecweb":
-            self.wDict = open(Path.IndexWebDir + "IndexWebDict.csv", 'w', encoding='utf-8')
-            self.wPost = open(Path.IndexWebDir + "IndexWebPost.csv", 'w', encoding='utf-8')
-            self.wDocIdDict = open(Path.IndexWebDir + "IndexDocIdDict.csv", 'w', encoding='utf-8')
+            self.wDict = open(Path.IndexWebDir + "IndexWebDict", 'w', encoding='utf-8')
+            self.wPost = open(Path.IndexWebDir + "IndexWebPost", 'w', encoding='utf-8')
+            self.wDocIdDict = open(Path.IndexWebDir + "IndexDocIdDict", 'w', encoding='utf-8')
         else:  # if type == "trectext"
-            self.wDict = open(Path.IndexTextDir + "IndexTextDict.csv", 'w', encoding='utf-8')
-            self.wPost = open(Path.IndexTextDir + "IndexTextPost.csv", 'w', encoding='utf-8')
-            self.wDocIdDict = open(Path.IndexTextDir + "IndexDocIdDict.csv", 'w', encoding='utf-8')
+            self.wDict = open(Path.IndexTextDir + "IndexTextDict", 'w', encoding='utf-8')
+            self.wPost = open(Path.IndexTextDir + "IndexTextPost", 'w', encoding='utf-8')
+            self.wDocIdDict = open(Path.IndexTextDir + "IndexDocIdDict", 'w', encoding='utf-8')
 
         # initialize the integer doc_id
         if type == "trecweb":
