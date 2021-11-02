@@ -7,3 +7,9 @@ IndexTextDir="data//indextext//"
 
 # address of generated Web index file.
 IndexWebDir="data//indexweb//"
+
+# address of topics.txt file
+TopicDir="data//topics.txt"
+
+# address of stopword list.
+StopwordDir="data//stopword.txt"

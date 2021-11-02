@@ -16,6 +16,7 @@ for query in queries:
     rank = 1
     for result in results:
         print(query.getTopicId()," Q0 ",result.getDocNo(),' ',rank," ",result.getScore()," MYRUN",)
+        rank += 1
 
 endTime = datetime.datetime.now()
 print ("load index & retrieve the token running time: ", endTime - startTime)

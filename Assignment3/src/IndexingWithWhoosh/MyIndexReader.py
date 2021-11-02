@@ -58,3 +58,7 @@ class MyIndexReader:
     def getDocLength(self, docId):
         words = self.searcher.stored_fields(docId)["doc_content"].split(" ")
         return len(words)
+
+    # Return number of documents in the collection
+    def getDocCount(self):
+        return self.searcher.doc_count_all()
