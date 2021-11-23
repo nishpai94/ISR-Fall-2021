@@ -2,11 +2,11 @@ IS 2140 Assignment 2
 
 
 - Index Web
-Index web corpus running time:  0:01:20.733133
+Index web corpus running time:  0:00:56.733133
 
 
 - Index Text
-index text corpus running time:  0:04:17.251156
+index text corpus running time:  0:03:41.251156
 
 
 - Retreival result of token "acow" in "trecweb"
@@ -28,7 +28,7 @@ NYT19990405.0253	513383	1
 NYT20000717.0201	677372	1
 NYT20000927.0406	702700	1
 NYT20000928.0343	703145	1
-load index & retrieve the token running time:  0:00:32.114439
+load index & retrieve the token running time:  0:00:27.114439
 
 
-My code generated the result and took a total time of approx. : 6 mins
+My code generated the result and took a total time of approx. : 5 mins 5 sec
