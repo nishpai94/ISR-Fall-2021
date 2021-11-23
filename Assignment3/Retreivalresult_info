@@ -2,14 +2,7 @@ IS 2140 Assignment 3
 
 a. load index & retrieve the token running time:  0:01:30.180857
 
-b. 901
-hong kong econom singapor
-902
-homosexu accept europ
-903
-star trek gener
-904
-progress dysphagia
+b.  Here, I considered miu = 1980
 901 	 hong kong econom singapor
 901  Q0  NYT19981126.0152   1   7.458166750485659e-10  MYRUN
 901  Q0  XIE19970628.0069   2   6.429630635880714e-10  MYRUN
@@ -75,3 +68,31 @@ progress dysphagia
 903  Q0  NYT20000403.0362   20   1.1444068720163565e-08  MYRUN
 904 	 progress dysphagia
 load index & retrieve the token running time:  0:01:30.180857
+
+# TODO : write about intersection
+
+c. When miu = 1960 :
+    total run time = 2:12
+    Here, maximum score of the highest ranked document is highest with this miu value
+
+   When miu = 1980 :
+    I got the total run time as 1:30
+    The maximum score of the highest ranked document is lower than that computed with miu = 1960
+
+   When miu = 2000 :
+    total run time = 1:51
+    Here, maximum score of the highest ranked document is lower than that computed with miu = 1980
+
+   When miu = 2020 :
+    total run time = 1:48
+    Here, maximum score of the highest ranked document is the lowest with this miu value
+
+   Therefore, from the above results, we can draw conclusion that as the miu value increases, the maximum score
+   of the highest ranked document goes on decreasing and the trend of scores of the other documents under the maximum
+   score documents also goes on decreasing. So, we can conclude that miu value and the maximum score value
+   of the highest ranked document are inversely proportional to each other for a particular query.
+
+   The total run time keeps fluctuating as the miu value increases. We first see higher run time, then lower, again
+   higher and then low.
+
+d. I used Python 3.8.5 version for my assignment

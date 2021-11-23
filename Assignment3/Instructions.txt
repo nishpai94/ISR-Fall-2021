@@ -5,7 +5,7 @@ Pre-requisites:
 - Unzip the “nvp15_2140a3.zip”
 - Place the result.trectext and result.trecweb inside folder "nvp15_2140a3/src/data"
 - Create folders indextext and indexweb inside folder "nvp15_2140a3/src/data"
-- Run pytho3 nHW2MainWhoosh.py to generate index files (you may need to install whoosh using pip3 if not done already)
+- Run python3 HW2MainWhoosh.py to generate index files (you may need to install whoosh using pip3 if not done already)
 
 Instructions to run:
 - Go inside the folder “nvp15_2140a3/src”
